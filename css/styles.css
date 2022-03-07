@@ -79,7 +79,7 @@ input {
 }
 
 table input {
-    width: 100px;
+    width: 100%;
     text-align: center;
     color: var(--black);
     -webkit-appearance: none;
@@ -94,6 +94,9 @@ table input.enabled {
     -moz-appearance: scrollbartrack-vertical ;
 }
 
+.form-container div input{
+    width: 180px;
+}
 .form-container div input:focus  {
     box-shadow: 0 0 10px var(--ok);
 }
@@ -110,8 +113,8 @@ button {
     border-radius: 5px;
     color: white;
     font-weight: bold;
-    height: 2rem;
-    width: 2rem;
+    height: 2.2rem;
+    width: 2.2rem;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -126,6 +129,7 @@ button:active{
 
 button.add {
     background-color: var(--button);
+    font-size: 20px;
 }
 
 button.remove::before{
@@ -151,4 +155,81 @@ button.edit {
 
 button.edit:hover {
     background-color: var(--edit);
+}
+.btn-outline-danger {
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    color: red;
+    font-weight: bold;
+    transform: rotate(-45deg);
+    font-size: 36px;
+    border: none;
+}
+.btn-outline-danger:hover {
+    transform: rotate(-45deg);
+}
+@media (max-width: 965px) {
+    .form-container div input{
+        width: 100%;
+    }
+    .container {
+        border-radius: 10px;
+        margin: auto;
+        margin-top: 100px;
+        overflow: hidden;
+        max-width: 700px;
+        border: 1px solid var(--border);
+    }
+    .form-container form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media (max-width: 850px) {
+    .form-container div input{
+        width: 700px;
+    }
+    .form-container form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media (max-width: 760px) {
+    .form-container div input{
+        width: 95%;
+    }
+    .form-container form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container {
+        border-radius: 10px;
+        margin: auto;
+        margin-top: 100px;
+        overflow: hidden;
+        max-width: 700px;
+        border: 1px solid var(--border);
+    }
+}
+@media (max-width: 545px) {
+    table input {
+        width: 50%;
+        text-align: center;
+        color: var(--black);
+        -webkit-appearance: none;
+        -moz-appearance: textfield;
+        background: transparent;
+    }
+    table, th, td {
+        border-bottom: 1px solid var(--border);
+        border-top: 1px solid var(--border);
+        border-collapse: collapse;
+        padding: 0.1rem;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+    }
 }

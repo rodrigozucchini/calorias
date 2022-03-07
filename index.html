@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css"/>
-    <title>Programación Funcional con Javascript</title>
+    <title>Calories</title>
 </head>
 <body>
     <div class="container">
@@ -21,7 +21,7 @@
                         <th>Protein</th>
                     </tr>
                 </thead>
-                <tbody id="list-items">
+                <tbody id="list-items"></tbody>
                 </tbody>
                 <tfoot>
                     <tr>
@@ -41,7 +41,7 @@
                     <input type="number" min="0" name="carbs" id="carbs" placeholder="Carbs">
                     <input type="number" min="0" name="protein" id="protein" placeholder="Protein">
                 </div>
-                <button class="add" id="add">+</button>
+                <button class="add" id="add" onclick="validateInputs()">+</button>
             </form>
         </div>
     </div>
